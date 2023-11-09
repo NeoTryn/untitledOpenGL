@@ -18,9 +18,7 @@ public:
 	Window window = {800, 600, "myWin"};
 	Shader shader = {};
 
-	std::map<std::string, VAO> VAOs;
-	std::map<std::string, VBO> VBOs;
-
+	VBO vbo;
 	unsigned int VAO, VBO;
 
 	Game();

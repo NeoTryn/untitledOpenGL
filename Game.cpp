@@ -64,8 +64,13 @@ void Game::setup() {
 	glCreateVertexArrays(1, &VAO);
 	glBindVertexArray(Game::VAO);
 
-	glCreateBuffers(1, &VBO);
-	glBindBuffer(GL_ARRAY_BUFFER, Game::VBO);
+    Game::vbo.setup();
+
+    Game::vbo.bind();
+
+    //Game::vbo.updateData(vertices, (&vertices);
+	/*glCreateBuffers(1, &VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, Game::VBO);*/
 
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), &vertices, GL_STATIC_DRAW);
 
