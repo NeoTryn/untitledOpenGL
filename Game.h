@@ -19,6 +19,8 @@ public:
 	Shader shader = {};
 
 	VBO vbo;
+	VAO vao;
+	
 	unsigned int VAO, VBO;
 
 	Game();

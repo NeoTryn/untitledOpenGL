@@ -61,8 +61,11 @@ void Game::setup() {
 
 	Game::shader.use();
 
-	glCreateVertexArrays(1, &VAO);
-	glBindVertexArray(Game::VAO);
+	//glCreateVertexArrays(1, &VAO);
+	//glBindVertexArray(Game::VAO);
+
+    Game::vao.setup();
+    Game::vao.bind();
 
     Game::vbo.setup();
 
@@ -79,7 +82,7 @@ void Game::setup() {
 }
 
 void Game::render() {
-    glBindVertexArray(VAO);
+    Game::vao.bind();
 	Game::shader.use();
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 }
